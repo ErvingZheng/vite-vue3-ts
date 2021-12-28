@@ -1,11 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { User, Lock } from '@element-plus/icons-vue'
 
+const router = useRouter()
+
 const form = ref({
-  user: '',
-  password: '',
+  user: 'admin',
+  password: 'admin',
 })
+
+const login = () => {
+  router.push({ path: '/dashboard' })
+}
 </script>
 
 <template>
@@ -27,7 +34,9 @@ const form = ref({
         />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" style="width: 100%">登录</el-button>
+        <el-button type="primary" style="width: 100%" @click="login"
+          >登录</el-button
+        >
       </el-form-item>
     </el-form>
   </div>
