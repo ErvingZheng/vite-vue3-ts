@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  name: string
+}>()
+</script>
 
 <template>
-  <svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-xxx"></use>
+  <svg aria-hidden="true">
+    <use :xlink:href="`#icon-${name}`"></use>
   </svg>
 </template>
