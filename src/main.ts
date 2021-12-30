@@ -8,10 +8,12 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import './permission.ts'
 import './styles/index.css'
+import SvgIcon from './components/SvgIcon/index.vue'
 
 const app = createApp(App)
 app.use(router)
 app.use(store, key)
 app.use(ElementPlus)
+app.component('svg-icon', SvgIcon)
 
 app.mount('#app')

@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import SvgIcon from '../../components/SvgIcon/index.vue'
-</script>
-
 <template>
   <div style="display: flex">
     <div class="svg__wrapper">
