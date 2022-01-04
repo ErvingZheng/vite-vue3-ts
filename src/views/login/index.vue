@@ -5,12 +5,17 @@ import { User, Lock } from '@element-plus/icons-vue'
 
 const router = useRouter()
 
-const form = ref({
+interface UserInput {
+  user: string
+  password: string
+}
+
+const form = ref<UserInput>({
   user: 'admin',
   password: 'admin',
 })
 
-const login = () => {
+const login = (): void => {
   router.push({ path: '/dashboard' })
 }
 </script>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Fold, Expand } from '@element-plus/icons-vue'
-import { useStore } from '../../store'
+import { useStore } from '@/store'
 
 const store = useStore()
 
