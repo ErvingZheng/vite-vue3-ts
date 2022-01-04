@@ -14,6 +14,6 @@ export const store = createStore<GlobalState>({
   },
 })
 
-export function useStore() {
+export function useStore(): Store<GlobalState> {
   return baseUseStore(key)
 }

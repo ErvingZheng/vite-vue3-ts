@@ -6,13 +6,19 @@ import { useStore } from '../../store'
 const store = useStore()
 
 const isCollapse = computed(() => store.state.app.isCollapse)
+
+const toggleCollapse = (): void => {
+  store.dispatch('app/toggleCollapse')
+}
 </script>
 
 <template>
   <el-header>
     <div class="header__content">
-      <expand class="side-menu__btn" v-if="isCollapse" />
-      <fold class="side-menu__btn" v-else />
+      <div @click="toggleCollapse">
+        <expand class="side-menu__btn" v-if="isCollapse" />
+        <fold class="side-menu__btn" v-else />
+      </div>
     </div>
   </el-header>
 </template>
