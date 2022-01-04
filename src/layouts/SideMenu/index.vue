@@ -17,11 +17,11 @@ const isCollapse = computed(() => store.state.app.isCollapse)
       :collapse="isCollapse"
     >
       <el-menu-item index="2">
-        <el-icon><icon-menu /></el-icon>
+        <el-icon><svg-icon name="dashboard" /></el-icon>
         <span>首页</span>
       </el-menu-item>
       <el-menu-item index="3">
-        <el-icon><document /></el-icon>
+        <el-icon><svg-icon name="component" /></el-icon>
         <span>图标</span>
       </el-menu-item>
     </el-menu>
@@ -31,5 +31,11 @@ const isCollapse = computed(() => store.state.app.isCollapse)
 <style scoped>
 .el-menu {
   min-height: 100%;
+}
+.el-icon svg {
+  fill: #fff;
+}
+.el-menu-item.is-active .el-icon svg {
+  fill: #ffd04b;
 }
 </style>
