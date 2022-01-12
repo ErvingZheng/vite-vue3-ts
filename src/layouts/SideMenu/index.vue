@@ -15,30 +15,32 @@ const onSelect = (index: string): void => {
 </script>
 
 <template>
-  <el-aside width="200px">
-    <el-menu
-      active-text-color="#ffd04b"
-      background-color="#545c64"
-      :default-active="defaultActive"
-      text-color="#fff"
-      :collapse="isCollapse"
-      @select="onSelect"
-    >
-      <el-menu-item index="/dashboard">
-        <el-icon><svg-icon name="dashboard" /></el-icon>
-        <span>首页</span>
-      </el-menu-item>
-      <el-menu-item index="/icon">
-        <el-icon><svg-icon name="component" /></el-icon>
-        <span>图标</span>
-      </el-menu-item>
-    </el-menu>
-  </el-aside>
+  <el-menu
+    active-text-color="#ffd04b"
+    background-color="#545c64"
+    :default-active="defaultActive"
+    text-color="#fff"
+    :collapse="isCollapse"
+    @select="onSelect"
+  >
+    <el-menu-item index="/dashboard">
+      <el-icon><svg-icon name="dashboard" /></el-icon>
+      <span>首页</span>
+    </el-menu-item>
+    <el-menu-item index="/icon">
+      <el-icon><svg-icon name="component" /></el-icon>
+      <span>图标</span>
+    </el-menu-item>
+  </el-menu>
 </template>
 
 <style scoped>
 .el-menu {
+  width: 200px;
   min-height: 100%;
+}
+.el-menu--collapse {
+  width: 64px;
 }
 .el-icon svg {
   fill: #fff;
