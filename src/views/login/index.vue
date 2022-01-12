@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { User, Lock } from '@element-plus/icons-vue'
 
@@ -10,7 +10,7 @@ interface UserInput {
   password: string
 }
 
-const form = ref<UserInput>({
+const form = reactive<UserInput>({
   user: 'admin',
   password: 'admin',
 })
