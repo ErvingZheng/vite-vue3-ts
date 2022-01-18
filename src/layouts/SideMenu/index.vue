@@ -39,7 +39,11 @@ const onSelect = (index: string): void => {
 
 <style scoped>
 .el-menu {
+  width: 200px;
   min-height: 100%;
+}
+.el-menu--collapse {
+  width: 64px;
 }
 .el-icon svg {
   fill: #fff;
