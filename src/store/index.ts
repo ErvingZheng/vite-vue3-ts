@@ -14,6 +14,7 @@ export const store = createStore<GlobalState>({
     app,
   },
   plugins: [
+    // 数据持久化
     createPersistedState({
       paths: ["app"],
     }),
