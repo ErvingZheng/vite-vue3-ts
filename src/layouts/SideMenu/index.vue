@@ -15,7 +15,7 @@ const onSelect = (index: string): void => {
 </script>
 
 <template>
-  <el-aside width="200px">
+  <el-aside :width="isCollapse ? 'auto' : '200px'">
     <el-menu
       active-text-color="#ffd04b"
       background-color="#545c64"
@@ -23,6 +23,7 @@ const onSelect = (index: string): void => {
       text-color="#fff"
       :collapse="isCollapse"
       @select="onSelect"
+      :collapse-transition="false"
     >
       <el-menu-item index="/dashboard">
         <el-icon><svg-icon name="dashboard" /></el-icon>
