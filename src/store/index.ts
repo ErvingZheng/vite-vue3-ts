@@ -1,4 +1,5 @@
 import { InjectionKey } from 'vue'
+import createPersistedState from "vuex-persistedstate"
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 import { AppState, app } from './modules/app'
 
@@ -12,6 +13,11 @@ export const store = createStore<GlobalState>({
   modules: {
     app,
   },
+  plugins: [
+    createPersistedState({
+      paths: ["app"],
+    }),
+  ],
 })
 
 export function useStore(): Store<GlobalState> {
