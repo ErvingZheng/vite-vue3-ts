@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { useStore } from '@/store'
+import { useAppStore } from '@/store/modules/app'
 
 const router = useRouter()
 const route = useRoute()
 const defaultActive: string = route.path
-const store = useStore()
-const isCollapse = computed(() => store.state.app.isCollapse)
+const store = useAppStore()
+const isCollapse = computed(() => store.isCollapse)
 
 const onSelect = (index: string): void => {
   router.push({ path: index })

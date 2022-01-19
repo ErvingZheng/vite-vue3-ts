@@ -1,27 +1,32 @@
-import { Module } from 'vuex'
-import { GlobalState } from '../index'
-import { TOGGLE_COLLAPSE } from '../mutation-types'
+import { defineStore } from 'pinia'
 
-export interface AppState {
-  isCollapse: boolean
-}
-
-export const app: Module<AppState, GlobalState> = {
-  namespaced: true,
-
-  state: {
-    isCollapse: false,
+export const useAppStore = defineStore({
+  id: 'useApp', // id必填，且需要唯一
+  state: () => {
+    return { isCollapse: false }
   },
-
-  mutations: {
-    [TOGGLE_COLLAPSE]: (state) => {
-      state.isCollapse = !state.isCollapse
-    },
-  },
-
+  // 通过actions修改state
+  // 支持async/await语法
+  // 可以调用actions里的另一个方法
+  // 可以调用其他store的actions方法
   actions: {
-    toggleCollapse({ commit }) {
-      commit(TOGGLE_COLLAPSE)
+    toggleCollapse() {
+      this.isCollapse = !this.isCollapse
     },
   },
-}
+  // 开启数据缓存
+  persist: {
+    enabled: true,
+    // strategies: [
+    //   {
+    //     storage: localStorage,
+    //     paths: [] // 可指定哪些数据要持久化 如['isCollapse']
+    //   }
+    // ]
+  }
+  // getters: {
+  //   isCollapse: (state) => {
+  //     return state.isCollapse
+  //   }
+  // }
+})

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Fold, Expand } from '@element-plus/icons-vue'
-import { useStore } from '@/store'
+import { useAppStore } from '@/store/modules/app'
 
-const store = useStore()
+const store = useAppStore()
 
-const isCollapse = computed(() => store.state.app.isCollapse)
+const isCollapse = computed(() => store.isCollapse)
 
 const toggleCollapse = (): void => {
-  store.dispatch('app/toggleCollapse')
+  store.toggleCollapse()
 }
 </script>
 

@@ -1,26 +1,8 @@
-import { InjectionKey } from 'vue'
-import createPersistedState from "vuex-persistedstate"
-import { createStore, useStore as baseUseStore, Store } from 'vuex'
-import { AppState, app } from './modules/app'
+// https://juejin.cn/post/7049196967770980389
+import { createPinia } from 'pinia'
+import piniaPluginPersist from 'pinia-plugin-persist'
 
-export interface GlobalState {
-  app: AppState
-}
+const store = createPinia()
+store.use(piniaPluginPersist) // 数据持久化
 
-export const key: InjectionKey<Store<GlobalState>> = Symbol()
-
-export const store = createStore<GlobalState>({
-  modules: {
-    app,
-  },
-  plugins: [
-    // 数据持久化
-    createPersistedState({
-      paths: ["app"],
-    }),
-  ],
-})
-
-export function useStore(): Store<GlobalState> {
-  return baseUseStore(key)
-}
+export default store

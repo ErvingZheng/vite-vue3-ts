@@ -1149,6 +1149,13 @@ picocolors@^1.0.0:
   resolved "https://registry.npmmirror.com/picocolors/download/picocolors-1.0.0.tgz?cache=0&sync_timestamp=1634093339035&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpicocolors%2Fdownload%2Fpicocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
   integrity sha1-y1vcdP8/UYkiNur3nWi8RFZKuBw=
 
+pinia-plugin-persist@^0.0.92:
+  version "0.0.92"
+  resolved "https://registry.yarnpkg.com/pinia-plugin-persist/-/pinia-plugin-persist-0.0.92.tgz#5043af2c047e16e499073053dbab498df220df28"
+  integrity sha512-eBNv1mqWwtiRPg4lraHuhXTqsPt51tRT2yaukW8+Gj9NIbLuPKS/VhnwmTF46WpIMJ0OP5xC4cwz9JOKJGX3GQ==
+  dependencies:
+    vue-demi "^0.11.4"
+
 pinia@^2.0.9:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.9.tgz#7d7767c46e3810fff046c289453242a68fc23492"
@@ -1597,6 +1604,11 @@ vue-demi@*:
   version "0.12.1"
   resolved "https://registry.npmmirror.com/vue-demi/download/vue-demi-0.12.1.tgz#f7e18efbecffd11ab069d1472d7a06e319b4174c"
   integrity sha1-9+GO++z/0RqwadFHLXoG4xm0F0w=
+
+vue-demi@^0.11.4:
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.11.4.tgz#6101992fe4724cf5634018a16e953f3052e94e2a"
+  integrity sha512-/3xFwzSykLW2HiiLie43a+FFgNOcokbBJ+fzvFXd0r2T8MYohqvphUyDQ8lbAwzQ3Dlcrb1c9ykifGkhSIAk6A==
 
 vue-eslint-parser@^8.0.0, vue-eslint-parser@^8.0.1:
   version "8.0.1"
