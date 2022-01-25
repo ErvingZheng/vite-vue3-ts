@@ -18,6 +18,10 @@ const routes: RouteRecordRaw[] = [
         path: 'icon',
         component: () => import('../views/icon/index.vue'),
       },
+      {
+        path: 'rich-text',
+        component: () => import('../views/richText/index.vue'),
+      },
     ],
   },
 

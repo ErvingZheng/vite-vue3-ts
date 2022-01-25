@@ -31,6 +31,10 @@ const onSelect = (index: string): void => {
       <el-icon><svg-icon name="component" /></el-icon>
       <span>图标</span>
     </el-menu-item>
+    <el-menu-item index="/rich-text">
+      <el-icon><svg-icon name="documentation" /></el-icon>
+      <span>富文本</span>
+    </el-menu-item>
   </el-menu>
 </template>
 

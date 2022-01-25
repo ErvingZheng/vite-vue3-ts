@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^0.2.4",
+    "@tinymce/tinymce-vue": "4",
     "@types/nprogress": "^0.2.0",
     "element-plus": "^1.2.0-beta.6",
     "normalize.css": "4.1.1",
